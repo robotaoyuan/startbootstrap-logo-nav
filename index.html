@@ -85,6 +85,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
+
                     <form><textarea id="code" name="code"># For this example, we're going to write a simple momentum script.  
 # When the stock goes up quickly, we're going to buy; 
 # when it goes down we're going to sell.  
@@ -151,21 +152,21 @@ def handle_data(context, data):
     # The record graph tracks up to five different variables. 
     # Here we record the Apple stock price.
     record(stock_price=data[context.security].price)</textarea>
-                    </form>
+                </form>
 
-                    <script>
-                    var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("code"), {
-                      theme: "monokai",
-                      mode:  "python",
-                      lineNumbers: true,
-                      autofocus:true,
-                      styleActiveLine: true,
-                      lineWrapping: true,
-                      scrollbarStyle: "simple"                   
-                  });
+                <script>
+                var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("code"), {
+                  theme: "monokai",
+                  mode:  "python",
+                  lineNumbers: true,
+                  autofocus:true,
+                  styleActiveLine: true,
+                  lineWrapping: true,
+                  scrollbarStyle: "simple"                   
+              });
                 //myCodeMirror.setOption("value","hello world");
 
-               
+
                 myCodeMirror.setSize(null,500);
                 myCodeMirror.execCommand("goDocEnd");
 
